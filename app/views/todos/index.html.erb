@@ -1,0 +1,19 @@
+<h1>Todo List</h1>
+<hr />
+
+  <h2><%= todo.title %></h2>
+  <% @todo_lists.each do |todo| %>
+  <h3>
+    <%= link_to page.title, page_path(page) %>
+  </h3>
+  <%end%>
+
+  <p><%= @todo.description%></p>
+
+<%else%>
+
+  <h2>No Todo Items. Make a List!</h2>
+
+<%end%>
+
+<%= link_to 'New List Item', new_todo_path %>
